@@ -51,12 +51,12 @@ endif
 ifeq ($(uname_S),SunOS)
   FINAL_CFLAGS= $(STD) $(WARN) $(OPT) $(DEBUG) $(CFLAGS) $(SQLITE_FLAGS) $(REDIS_CFLAGS) -D__EXTENSIONS__ -D_XPG6
   FINAL_LDFLAGS= $(LDFLAGS) $(REDIS_LDFLAGS) -g -ggdb
-  FINAL_LIBS= -ldl -lnsl -lsocket -lm -lpthread
+  FINAL_LIBS= -ldl -lnsl -lsocket -lm -lpthread -lz
   DEBUG= -g -ggdb
 else
   FINAL_CFLAGS= $(STD) $(WARN) $(OPT) $(DEBUG) $(CFLAGS) $(SQLITE_FLAGS) $(REDIS_CFLAGS)
   FINAL_LDFLAGS= $(LDFLAGS) $(REDIS_LDFLAGS) -g -rdynamic -ggdb
-  FINAL_LIBS= -lm -pthread
+  FINAL_LIBS= -lm -pthread -lz
   DEBUG= -g -rdynamic -ggdb
 endif
 

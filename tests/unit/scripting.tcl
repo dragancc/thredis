@@ -176,6 +176,14 @@ start_server {tags {"scripting"}} {
         set e
     } {*against a key*}
 
+    test {EVAL - ZLIB string compress and decompress} {
+        r eval {local compress = zlib.compress('hello world')
+                local decompress = zlib.decompress(compress)
+                print (decompress)
+                assert (decompress == 'hello world')
+        } 0
+    } {}
+
     test {SCRIPTING FLUSH - is able to clear the scripts cache?} {
         r set mykey myval
         set v [r evalsha 9bd632c7d33e571e9f24556ebed26c3479a87129 0]
