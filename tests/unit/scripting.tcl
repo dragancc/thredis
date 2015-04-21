@@ -290,7 +290,7 @@ start_server {tags {"scripting"}} {
 # Start a new server since the last test in this stanza will kill the
 # instance at all.
 start_server {tags {"scripting"}} {
-    # in thredis timedout scripts simply die - no need to kill them
+    # in redis timedout scripts simply die - no need to kill them
     # test {Timedout read-only scripts can be killed by SCRIPT KILL} {
     #     set rd [redis_deferring_client]
     #     r config set lua-time-limit 10
@@ -302,7 +302,7 @@ start_server {tags {"scripting"}} {
     #     assert_equal [r ping] "PONG"
     # }
 
-    # there is no such restriction in thredis since it isn't deterministic to begin with
+    # there is no such restriction in redis since it isn't deterministic to begin with
     # test {Timedout scripts that modified data can't be killed by SCRIPT KILL} {
     #     set rd [redis_deferring_client]
     #     r config set lua-time-limit 10

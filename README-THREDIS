@@ -4,14 +4,14 @@ THREDIS TODO: Add a descrption of SQLite integration.
 Thredis
 -------
 
-Thredis is threaded Redis. (Apparently "thredis" is also "ribbons" in
+Thredis is threaded Redis. (Apparently "redis" is also "ribbons" in
 Scots). At this point it is work-in-progress ALPHA quality, probably
 contains many bugs and in need of much improvement, but should be
 sufficient as proof-of-concept to toy around with. Use at your own
 risk.
 
 Thredis is for the most part identical to Redis. We did rename the
-executable to thredis-server so that it looks different from
+executable to redis-server so that it looks different from
 redis-server when running ps, etc.
 
 
@@ -38,7 +38,7 @@ slaves will have a different database from the master.
 
 Getting started
 
-You probably want start out by trying the thredis-2.6 branch. It is
+You probably want start out by trying the redis-2.6 branch. It is
 based on a stable Redis release.
 
 

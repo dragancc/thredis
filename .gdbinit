@@ -1,3 +1,3 @@
-set args thredis.conf
+set args redis.conf
 run
 

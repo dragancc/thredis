@@ -373,7 +373,7 @@ start_server {
         $watching_client get somekey
         $watching_client read
         $watching_client exec
-        # in thredis the above exec is a separate thread, let it finish
+        # in redis the above exec is a separate thread, let it finish
         after 100
         # Blocked BLPOPLPUSH may create problems, unblock it.
         r lpush srclist element

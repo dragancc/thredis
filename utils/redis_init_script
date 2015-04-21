@@ -4,7 +4,7 @@
 # as it does use of the /proc filesystem.
 
 REDISPORT=6379
-EXEC=/usr/local/bin/thredis-server
+EXEC=/usr/local/bin/redis-server
 CLIEXEC=/usr/local/bin/redis-cli
 
 PIDFILE=/var/run/redis_${REDISPORT}.pid

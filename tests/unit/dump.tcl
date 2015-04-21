@@ -111,7 +111,7 @@ start_server {tags {"dump"}} {
         }
     }
 
-# this test won't work because thredis does not block
+# this test won't work because redis does not block
 
     # test {MIGRATE timeout actually works} {
     #     set first [srv 0 client]
